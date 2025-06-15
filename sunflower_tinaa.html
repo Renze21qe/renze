@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advance Happy Birthday Tinaa 🌻</title>
+  <style>
+    body {
+      background: #fffbe6;
+      font-family: "Segoe UI", sans-serif;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #e57300;
+      animation: glow 2s infinite ease-in-out;
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px #ffca28; }
+      50% { text-shadow: 0 0 20px #fdd835; }
+    }
+
+    .pot {
+      width: 120px;
+      height: 70px;
+      background: #a0522d;
+      border-radius: 0 0 20px 20px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .stem {
+      width: 10px;
+      height: 100px;
+      background: green;
+      margin: 0 auto;
+      margin-bottom: -20px;
+    }
+
+    .leaf {
+      width: 40px;
+      height: 20px;
+      background: green;
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .leaf.left {
+      transform: rotate(-40deg);
+      left: 50%;
+      margin-left: -60px;
+      top: 60px;
+    }
+
+    .leaf.right {
+      transform: rotate(40deg);
+      right: 50%;
+      margin-right: -60px;
+      top: 60px;
+    }
+
+    .flower {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      margin: 0 auto;
+      animation: rotate 10s linear infinite;
+    }
+
+    .petal {
+      width: 40px;
+      height: 80px;
+      background: gold;
+      border-radius: 50% 50% 0 0;
+      position: absolute;
+      top: 35px;
+      left: 55px;
+      transform-origin: bottom center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .center {
+      width: 60px;
+      height: 60px;
+      background: sienna;
+      border-radius: 50%;
+      position: absolute;
+      top: 45px;
+      left: 45px;
+      box-shadow: inset 0 0 10px #00000070;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .msg {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #6d4c41;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      background: #ffecb3;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌻 Advance Happy Birthday Tinaa! 🎉</h1>
+
+  <div class="flower" id="flower">
+    <div class="center"></div>
+  </div>
+
+  <div class="stem"></div>
+  <div class="leaf left"></div>
+  <div class="leaf right"></div>
+  <div class="pot"></div>
+
+  <div class="msg">
+    Pakyu and cute enjoy your birthday Tinaa 😂💛  
+    You're like this sunflower — standing tall, cute, and shining.  
+    Keep blooming always 🌼
+  </div>
+
+  <script>
+    const flower = document.getElementById("flower");
+    const petalCount = 20;
+    for (let i = 0; i < petalCount; i++) {
+      const petal = document.createElement("div");
+      petal.classList.add("petal");
+      petal.style.transform = `rotate(${(360 / petalCount) * i}deg) translateY(-50px)`;
+      flower.appendChild(petal);
+    }
+  </script>
+
+</body>
+</html>
