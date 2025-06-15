@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌻 Happy Birthday Bella 🌟</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(#fffbe6, #ffe680);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .sparkle-text {
+      font-size: 2.2em;
+      font-weight: bold;
+      color: #d2691e;
+      text-shadow: 0 0 5px #fff176, 0 0 15px #ffc107;
+      animation: sparkle 1.5s infinite ease-in-out;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { text-shadow: 0 0 5px #fff176, 0 0 15px #ffc107; }
+      50% { text-shadow: 0 0 10px #ffe57f, 0 0 25px #ffca28; }
+    }
+
+    .sunflower {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      animation: spin 15s linear infinite;
+      margin-top: 10px;
+    }
+
+    .petal {
+      position: absolute;
+      width: 35px;
+      height: 100px;
+      background: gold;
+      border-radius: 50% 50% 0 0;
+      transform-origin: bottom center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80px;
+      height: 80px;
+      background: sienna;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: inset 0 0 12px #00000070;
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 1.3em;
+      color: #5c3a1d;
+      padding: 10px 20px;
+      background: #fff8dc;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 80%;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sparkle-text">🌻 Advance Happy Birthday Bella! 🎂</div>
+
+  <div class="sunflower" id="sunflower">
+    <div class="center"></div>
+  </div>
+
+  <div class="message">
+    May your year bloom like a sunflower — full of warmth, light, and golden moments. 💛🌞<br>
+    You deserve all the love and sunshine!
+  </div>
+
+  <!-- Optional soft music -->
+  <audio autoplay loop hidden>
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/13/audio_3d9b7a8a4c.mp3?filename=sweet-memories-13959.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const sunflower = document.getElementById("sunflower");
+    const totalPetals = 36;
+
+    for (let i = 0; i < totalPetals; i++) {
+      const petal = document.createElement("div");
+      petal.className = "petal";
+      petal.style.transform = `rotate(${(360 / totalPetals) * i}deg) translateY(-100px)`;
+      sunflower.appendChild(petal);
+    }
+  </script>
+
+</body>
+</html>
